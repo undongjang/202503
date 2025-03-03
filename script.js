@@ -2,7 +2,7 @@
 $(document).ready(function () {
   let totalPages = 62;
   let book = $("#book");
-  let pageAspectRatio = 1.4841; // 세로:가로 비율
+  let pageAspectRatio = 1.4841269841; // 세로:가로 비율
   let bookWidth = window.innerHeight * 0.55 * 2;
   let bookHeight = (bookWidth * pageAspectRatio) / 2;
 
@@ -13,8 +13,9 @@ $(document).ready(function () {
   }
 
   $("#book").turn({
-    width: bookWidth,
-    height: bookHeight,
+    // 1512 × 2244
+    width: 1000,
+    height: 720,
     autoCenter: true,
   });
 
