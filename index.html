@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>PlayGround</title>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="./style.css" />
+    </head>
+  </head>
+  <body>
+    <div class="playground-pc-frame">
+      <div class="book-container">
+        <div id="book"></div>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">이전</button>
+        <button id="nextBtn">다음</button>
+      </div>
+    </div>
+
+    <div class="playground-mobile-frame">
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="book_mobile">
+          <!-- 이미지 위치 -->
+        </div>
+      </div>
+      <div class="pageNumber" id="pageNumber"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
