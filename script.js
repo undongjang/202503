@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let totalPages = 104;
 let book = document.getElementById("book_mobile");
-for (let i = 0; i <= totalPages; i++) {
+for (let i = 1; i <= totalPages; i++) {
   let imageElement = document.createElement("div");
   imageElement.classList.add("swiper-slide");
   imageElement.style.backgroundImage = `url('./images/page${i}.png')`;
