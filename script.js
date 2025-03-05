@@ -32,15 +32,16 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper-container", {
     loop: false,
+    lazy: true, // lazy loading for mobile loading speed
     pagination: {
       el: ".swiper-pagination",
     },
-    // on: {
-    //   slideChange: function () {
-    //     currentPage = swiper.realIndex + 1;
-    //     pageNumber.innerText = `${currentPage} / ${totalPages}`;
-    //   },
-    // },
+    on: {
+      slideChange: function () {
+        currentPage = swiper.realIndex + 1;
+        pageNumber.innerText = `${currentPage} / ${totalPages}`;
+      },
+    },
   });
 });
 
@@ -49,10 +50,19 @@ let book = document.getElementById("book_mobile");
 for (let i = 1; i <= totalPages; i++) {
   let imageElement = document.createElement("div");
   imageElement.classList.add("swiper-slide");
-  imageElement.style.backgroundImage = `url('./images/page${i}.png')`;
+
+  let img = document.createElement("img");
+  img.setAttribute("src", `./images/page${i}.png`);
+  img.classList.add("swiper-lazy");
+  img.setAttribute("width", "100%");
+  let lazyPreloader = document.createElement("div");
+  lazyPreloader.classList.add("swiper-lazy-preloader");
+
+  imageElement.appendChild(img);
+  imageElement.appendChild(lazyPreloader);
   book.appendChild(imageElement);
 }
 
-// let pageNumber = document.getElementById("pageNumber");
-// pageNumber.innerText = `1 / ${totalPages}`;
-// let currentPage = 1;
+let pageNumber = document.getElementById("pageNumber");
+pageNumber.innerText = `1 / ${totalPages}`;
+let currentPage = 1;
