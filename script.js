@@ -26,6 +26,27 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     $("#book").turn("next");
   });
+
+  // mobile frame
+  let book_mobile = document.getElementById("book_mobile");
+  for (let i = 1; i <= totalPages; i++) {
+    let imageElement = document.createElement("div");
+    imageElement.classList.add("swiper-slide");
+
+    let img = document.createElement("img");
+    img.setAttribute(
+      "src",
+      `https://github.com/undongjang/202503/blob/main/images/page${i}.png?raw=true`
+    );
+    img.classList.add("swiper-lazy");
+    img.setAttribute("width", "100%");
+    let lazyPreloader = document.createElement("div");
+    lazyPreloader.classList.add("swiper-lazy-preloader");
+
+    imageElement.appendChild(img);
+    imageElement.appendChild(lazyPreloader);
+    book_mobile.appendChild(imageElement);
+  }
 });
 
 // mobile frame
@@ -44,27 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-
-let totalPages = 104;
-let book = document.getElementById("book_mobile");
-for (let i = 1; i <= totalPages; i++) {
-  let imageElement = document.createElement("div");
-  imageElement.classList.add("swiper-slide");
-
-  let img = document.createElement("img");
-  img.setAttribute(
-    "src",
-    `https://github.com/undongjang/202503/blob/main/images/page${i}.png?raw=true`
-  );
-  img.classList.add("swiper-lazy");
-  img.setAttribute("width", "100%");
-  let lazyPreloader = document.createElement("div");
-  lazyPreloader.classList.add("swiper-lazy-preloader");
-
-  imageElement.appendChild(img);
-  imageElement.appendChild(lazyPreloader);
-  book.appendChild(imageElement);
-}
 
 let pageNumber = document.getElementById("pageNumber");
 pageNumber.innerText = `1 / ${totalPages}`;
