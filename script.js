@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: ".swiper-pagination",
     },
-    on: {
-      slideChange: function () {
-        currentPage = swiper.realIndex + 1;
-        pageNumber.innerText = `${currentPage} / ${totalPages}`;
-      },
-    },
+    // on: {
+    //   slideChange: function () {
+    //     currentPage = swiper.realIndex + 1;
+    //     pageNumber.innerText = `${currentPage} / ${totalPages}`;
+    //   },
+    // },
   });
 });
 
@@ -53,6 +53,6 @@ for (let i = 1; i <= totalPages; i++) {
   book.appendChild(imageElement);
 }
 
-let pageNumber = document.getElementById("pageNumber");
-pageNumber.innerText = `1 / ${totalPages}`;
-let currentPage = 1;
+// let pageNumber = document.getElementById("pageNumber");
+// pageNumber.innerText = `1 / ${totalPages}`;
+// let currentPage = 1;
