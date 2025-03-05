@@ -34,10 +34,7 @@ $(document).ready(function () {
     imageElement.classList.add("swiper-slide");
 
     let img = document.createElement("img");
-    img.setAttribute(
-      "src",
-      `https://github.com/undongjang/202503/blob/main/images/page${i}.png?raw=true`
-    );
+    img.setAttribute("src", `./images/page${i}.png`);
     img.classList.add("swiper-lazy");
     img.setAttribute("width", "100%");
     let lazyPreloader = document.createElement("div");
