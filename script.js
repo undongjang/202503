@@ -6,7 +6,7 @@ $(document).ready(function () {
   let bookWidth = window.innerHeight * 0.55 * 2;
   let bookHeight = (bookWidth * pageAspectRatio) / 2;
 
-  for (let i = 0; i <= totalPages; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     book.append(
       `<div class="page" style="background-image: url('./images/page${i}.png');"></div>`
     );
