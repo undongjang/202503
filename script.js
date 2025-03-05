@@ -53,14 +53,17 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper-container", {
     loop: false,
-    lazy: true, // lazy loading for mobile loading speed
+    lazy: {
+      loadPrevNext: true, // 이전/다음 슬라이드 미리 로드하여 부드럽게
+    }, // lazy loading for mobile loading speed
     pagination: {
       el: ".swiper-pagination",
     },
     on: {
       slideChange: function () {
-        currentPage = swiper.realIndex + 1;
-        pageNumber.innerText = `${currentPage} / ${totalPages}`;
+        requestAnimationFrame(() => {
+          pageNumber.innerText = `${swiper.realIndex + 1} / ${totalPages}`;
+        });
       },
     },
   });
