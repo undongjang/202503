@@ -80,7 +80,7 @@ button:hover {
 .swiper-container {
   /* 1.4841; 세로:가로 비율 */
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
 }
 
 .swiper-slide {
@@ -125,9 +125,4 @@ button {
   font-size: 12px;
   margin: 5px;
   cursor: pointer;
-}
-
-.swiper-slide {
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
 }

@@ -56,23 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
     lazy: {
       loadPrevNext: true, // 이전/다음 슬라이드 미리 로드하여 부드럽게
     }, // lazy loading for mobile loading speed
-    slidesPerView: 1,
-    preloadImages: false,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
+    // slidesPerView: 1,
+    // preloadImages: false,
+    // watchSlidesProgress: true,
+    // watchSlidesVisibility: true,
     pagination: {
       el: ".swiper-pagination",
     },
     on: {
       slideChange: function () {
-        requestAnimationFrame(() => {
-          pageNumber.innerText = `${swiper.realIndex + 1} / ${totalPages}`;
-        });
+        currentPage = swiper.realIndex + 1;
+        pageNumber.innerText = `${currentPage} / ${totalPages}`;
       },
     },
   });
 });
 
+let totalPages = 104;
 let pageNumber = document.getElementById("pageNumber");
 pageNumber.innerText = `1 / ${totalPages}`;
 let currentPage = 1;
