@@ -51,10 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper-container", {
     loop: false,
     lazy: {
-      loadPrevNext: true, // 이전/다음 슬라이드 미리 로드하여 부드럽게
-    }, // lazy loading for mobile loading speed
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
+      enabled: true, // Lazy Loading 활성화
+      loadPrevNext: true, // 이전/다음 슬라이드 미리 로드
+      loadPrevNextAmount: 2, // 총 2개의 이전/다음 슬라이드 로드
+      loadOnTransitionStart: true, // 슬라이드 전환 시작 시 로드
+      checkInView: true, // 화면에 보이는 슬라이드만 로드
+    },
     pagination: {
       el: ".swiper-pagination",
     },
