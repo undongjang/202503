@@ -129,3 +129,8 @@ button {
   margin: 5px;
   cursor: pointer;
 }
+
+.swiper-lazy {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}

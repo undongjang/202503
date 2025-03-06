@@ -26,27 +26,27 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     $("#book").turn("next");
   });
-
-  // mobile frame
-  let book_mobile = document.getElementById("book_mobile");
-  for (let i = 1; i <= totalPages; i++) {
-    let imageElement = document.createElement("div");
-    imageElement.classList.add("swiper-slide");
-
-    let img = document.createElement("img");
-    img.setAttribute("src", `./images/page${i}.png`);
-    img.classList.add("swiper-lazy");
-    img.setAttribute("width", "100%");
-    let lazyPreloader = document.createElement("div");
-    lazyPreloader.classList.add("swiper-lazy-preloader");
-
-    imageElement.appendChild(img);
-    imageElement.appendChild(lazyPreloader);
-    book_mobile.appendChild(imageElement);
-  }
 });
 
 // mobile frame
+let totalPages = 104;
+let book_mobile = document.getElementById("book_mobile");
+for (let i = 1; i <= totalPages; i++) {
+  let imageElement = document.createElement("div");
+  imageElement.classList.add("swiper-slide");
+
+  let img = document.createElement("img");
+  img.setAttribute("src", `./images/page${i}.png`);
+  img.classList.add("swiper-lazy");
+  img.setAttribute("width", "100%");
+  let lazyPreloader = document.createElement("div");
+  lazyPreloader.classList.add("swiper-lazy-preloader");
+
+  imageElement.appendChild(img);
+  imageElement.appendChild(lazyPreloader);
+  book_mobile.appendChild(imageElement);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper-container", {
     loop: false,
@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let totalPages = 104;
 let pageNumber = document.getElementById("pageNumber");
 pageNumber.innerText = `1 / ${totalPages}`;
 let currentPage = 1;
