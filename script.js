@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     lazy: {
       loadPrevNext: true, // 이전/다음 슬라이드 미리 로드하여 부드럽게
     }, // lazy loading for mobile loading speed
-    slidesPerView: 1,
-    preloadImages: false,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     pagination: {
