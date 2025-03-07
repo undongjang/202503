@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: sticky;
     top: 0;
   }
 }
