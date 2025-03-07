@@ -50,12 +50,13 @@ for (let i = 1; i <= totalPages; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper-container", {
     loop: false,
-    lazy: {
-      enabled: true, // Lazy Loading 활성화
-      loadPrevNext: true, // 이전/다음 슬라이드 미리 로드
-      loadPrevNextAmount: 2, // 총 2개의 이전/다음 슬라이드 로드
-      loadOnTransitionStart: true, // 슬라이드 전환 시작 시 로드
-      checkInView: true, // 화면에 보이는 슬라이드만 로드
+    lazy: true,
+    preloadImages: false,
+    observer: false, // Swiper가 변경된 DOM을 감지하도록 설정
+    observeParents: false, // Swiper 부모 요소의 변경도 감지
+    touchMoveStopPropagation: false,
+    virtual: {
+      enabled: true,
     },
     pagination: {
       el: ".swiper-pagination",

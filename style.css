@@ -84,6 +84,7 @@ button:hover {
   /* 1.4841; 세로:가로 비율 */
   width: 100vw;
   height: 148vw;
+  will-change: transform;
 }
 
 .swiper-slide {
@@ -94,6 +95,8 @@ button:hover {
   color: #fff;
   background-size: cover;
   background-position: center;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .pageNumber {
@@ -128,9 +131,4 @@ button {
   font-size: 12px;
   margin: 5px;
   cursor: pointer;
-}
-
-.swiper-slide {
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
 }
