@@ -1,5 +1,10 @@
 /* 모바일에서만 보이게 */
 @media screen and (max-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+    height: 100%;
+  }
   .playground-pc-frame {
     display: none;
   }
