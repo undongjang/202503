@@ -39,11 +39,11 @@ for (let i = 1; i <= totalPages; i++) {
   img.setAttribute("src", `./images/page${i}.png`);
   img.classList.add("swiper-lazy");
   img.setAttribute("width", "100%");
-  let lazyPreloader = document.createElement("div");
-  lazyPreloader.classList.add("swiper-lazy-preloader");
+  // let lazyPreloader = document.createElement("div");
+  // lazyPreloader.classList.add("swiper-lazy-preloader");
 
   imageElement.appendChild(img);
-  imageElement.appendChild(lazyPreloader);
+  // imageElement.appendChild(lazyPreloader);
   book_mobile.appendChild(imageElement);
 }
 
