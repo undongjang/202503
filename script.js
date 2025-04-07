@@ -1,6 +1,6 @@
 // pc frame
 $(document).ready(function () {
-  let totalPages = 104;
+  let totalPages = 98;
   let book = $("#book");
   let pageAspectRatio = 1.35; // 세로:가로 비율
   let bookWidth = window.innerHeight * 0.55 * 2;
@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 // mobile frame
-let totalPages = 104;
+let totalPages = 98;
 let book_mobile = document.getElementById("book_mobile");
 for (let i = 1; i <= totalPages; i++) {
   let imageElement = document.createElement("div");
